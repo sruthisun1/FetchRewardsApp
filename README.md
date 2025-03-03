@@ -18,6 +18,8 @@ Tech Stack
 - Networking: Retrofit
 - State Management: ViewModel, StateFlow
 
-![FetchList](https://github.com/user-attachments/assets/cbe36fc3-9e03-4c51-b52c-53dcd6d8d2a4)
-![FetchExpanded](https://github.com/user-attachments/assets/b13ab2c6-358e-4b99-a543-af19da7ff374)
-![FetchExpanded2](https://github.com/user-attachments/assets/bd20a6f3-6766-4ceb-a7b3-edbc827e3624)
+<p align="center">
+    <img src="https://github.com/user-attachments/assets/cbe36fc3-9e03-4c51-b52c-53dcd6d8d2a4" width="30%" />
+    <img src="https://github.com/user-attachments/assets/b13ab2c6-358e-4b99-a543-af19da7ff374" width="30%" />
+    <img src="https://github.com/user-attachments/assets/bd20a6f3-6766-4ceb-a7b3-edbc827e3624" width="30%" />
+</p>
