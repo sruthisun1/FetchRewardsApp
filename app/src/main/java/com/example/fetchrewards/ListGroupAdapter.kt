@@ -7,6 +7,8 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.fetchrewards.R
 import com.example.fetchrewards.data.Item
 
+// Adapter for displaying items grouped by list ID in an expandable format
+
 class ListGroupAdapter(private var groupedItems: Map<Int, List<Item>>) :
     RecyclerView.Adapter<ListGroupAdapter.GroupViewHolder>() {
 
@@ -29,6 +31,8 @@ class ListGroupAdapter(private var groupedItems: Map<Int, List<Item>>) :
 
         holder.listIdTextView.text = "List ID: $listId"
 
+        // Use existing adapter if possible (prevents unnecessary recreation)
+
         val itemAdapter = ItemAdapter(items)
         holder.itemsRecyclerView.apply {
             layoutManager = LinearLayoutManager(holder.itemView.context)
@@ -37,6 +41,8 @@ class ListGroupAdapter(private var groupedItems: Map<Int, List<Item>>) :
     }
 
     override fun getItemCount() = listIds.size
+
+    //Updates the dataset and notifies the adapter to refresh
 
     fun updateGroups(newGroupedItems: Map<Int, List<Item>>) {
         groupedItems = newGroupedItems

@@ -45,6 +45,8 @@ class MainActivity : ComponentActivity() {
     }
 }
 
+// Main app UI that manages different loading states
+
 @Composable
 fun FetchApp(viewModel: ItemViewModel = viewModel()) {
     val uiState by viewModel.uiState.collectAsState()
@@ -93,6 +95,8 @@ fun FetchApp(viewModel: ItemViewModel = viewModel()) {
     }
 }
 
+// Displays a list of items grouped by listId
+
 @Composable
 fun ItemListScreen(groupedItems: Map<Int, List<Item>>) {
     val expandedState = remember { mutableStateMapOf<Int, Boolean>() }
@@ -128,6 +132,8 @@ fun ItemListScreen(groupedItems: Map<Int, List<Item>>) {
         }
     }
 }
+
+// Creates an expandable button for each List ID group
 
 @Composable
 fun ExpandableListSection(
@@ -172,22 +178,7 @@ fun ExpandableListSection(
     }
 }
 
-
-@Composable
-fun ListHeader(listId: Int) {
-    Surface(
-        modifier = Modifier.fillMaxWidth(),
-        color = MaterialTheme.colorScheme.primary,
-        shape = MaterialTheme.shapes.medium
-    ) {
-        Text(
-            text = "List ID: $listId",
-            fontWeight = FontWeight.Bold,
-            color = MaterialTheme.colorScheme.onPrimary,
-            modifier = Modifier.padding(16.dp)
-        )
-    }
-}
+// Individual item card displaying Name and ID side by side
 
 @Composable
 fun ItemCard(item: Item) {
